@@ -12,9 +12,12 @@ public class App {
 		System.out.println(student1.toString());
 
 		System.out.println("Setter Inejction :: 2");
-		ApplicationContext setterContext2 = new ClassPathXmlApplicationContext("setter-injection.xml");
-		Student student2 = (Student) setterContext2.getBean("student2");
+		Student student2 = (Student) setterContext.getBean("student2");
 		System.out.println(student2.toString());
+		
+		System.out.println("Setter injection :: 3 - P Schema");
+		Student student3 = (Student) setterContext.getBean("student3");
+		System.out.println(student3.toString());
 		
 	}
 }
