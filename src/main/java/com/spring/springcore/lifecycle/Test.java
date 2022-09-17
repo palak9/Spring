@@ -19,5 +19,9 @@ public class Test {
 		Author author = (Author) context.getBean("author");
 		System.out.println(author);
 		
+		
+		System.out.println("Bean life Cycle using Annotations.. ");
+		Library lib = (Library) context.getBean("library1");
+		System.out.println(lib);
 	}
 }

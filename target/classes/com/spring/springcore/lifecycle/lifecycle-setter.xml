@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:aop="http://www.springframework.org/schema/aop"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
- https://www.springframework.org/schema/beans/spring-beans.xsd
- http://www.springframework.org/schema/aop
- https://www.springframework.org/schema/aop/spring-aop.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- To enable all the annotations -->
+	<context:annotation-config />
 
 	<bean class="com.spring.springcore.lifecycle.Book" name="book1"
 		init-method="initMe" destroy-method="destroyMe">
@@ -16,9 +24,16 @@
 	</bean>
 
 
-<bean class="com.spring.springcore.lifecycle.Author" name="author">
-	<property name="name" value="Caleb"></property>
-	<property name="age" value="35"></property>
-</bean>
+	<!-- Using Spring Interface -->
+	<bean class="com.spring.springcore.lifecycle.Author" name="author">
+		<property name="name" value="Caleb"></property>
+		<property name="age" value="35"></property>
+	</bean>
+
+
+	<!-- Using Annotations -->
+	<bean class="com.spring.springcore.lifecycle.Library"
+		name="library1" p:cityLocation="Pune" p:pincode="546466">
+	</bean>
 
 </beans>
