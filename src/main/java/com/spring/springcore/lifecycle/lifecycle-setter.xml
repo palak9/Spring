@@ -16,4 +16,9 @@
 	</bean>
 
 
+<bean class="com.spring.springcore.lifecycle.Author" name="author">
+	<property name="name" value="Caleb"></property>
+	<property name="age" value="35"></property>
+</bean>
+
 </beans>
