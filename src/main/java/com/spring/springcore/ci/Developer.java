@@ -1,10 +1,20 @@
 package com.spring.springcore.ci;
 
+import java.util.List;
+
 public class Developer {
 
 	private String name;
 	private int experience;
 	private Company company;
+	private List<String> technologies;
+
+	public Developer(String name, int experience, List<String> technologies) {
+		super();
+		this.name = name;
+		this.experience = experience;
+		this.technologies = technologies;
+	}
 
 	public Developer(String name, int experience) {
 		super();
@@ -21,7 +31,8 @@ public class Developer {
 
 	@Override
 	public String toString() {
-		return "Developer [name=" + name + ", experience=" + experience + ", company=" + company + "]";
+		return "Developer [name=" + name + ", experience=" + experience + ", company=" + company + ", technologies="
+				+ technologies + "]";
 	}
 
 }

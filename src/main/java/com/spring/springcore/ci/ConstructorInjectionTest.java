@@ -23,6 +23,12 @@ public class ConstructorInjectionTest {
 		
 		System.out.println(dev3);
 		System.out.println(dev4);
+		
+		System.out.println("Constructor Injection for Collection types..");
+		
+		Developer dev5 = (Developer) context.getBean("dev5");
+		System.out.println(dev5);
+		
 
 	}
 

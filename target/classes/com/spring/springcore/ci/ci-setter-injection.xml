@@ -31,11 +31,23 @@
 	<bean class="com.spring.springcore.ci.Developer" name="dev3"
 		c:name="Breg" c:experience="10" c:company-ref="company" />
 
-
 	<bean class="com.spring.springcore.ci.Company" name="company2"
 		c:companyName="ZS" />
 
 	<bean class="com.spring.springcore.ci.Developer" name="dev4"
 		c:name="Jackson" c:experience="7" c:company-ref="company2" />
+
+
+	<!-- Collection type -->
+	<bean class = "com.spring.springcore.ci.Developer" name="dev5" c:name="Jinnie" c:experience="3">
+		<constructor-arg>
+		<list>
+			<value>Python</value>
+			<value>Flask</value>
+			<value>MongoDB</value>
+			<value>Git</value>
+		</list>
+		</constructor-arg>
+	</bean>
 
 </beans>
