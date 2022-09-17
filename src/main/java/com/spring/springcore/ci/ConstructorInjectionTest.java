@@ -15,6 +15,14 @@ public class ConstructorInjectionTest {
 
 		System.out.println(dev1.toString());
 		System.out.println(dev2.toString());
+		
+		
+		System.out.println("Constructor Injection using C Schema..");
+		Developer dev3 = (Developer) context.getBean("dev3");
+		Developer dev4 = (Developer) context.getBean("dev4");
+		
+		System.out.println(dev3);
+		System.out.println(dev4);
 
 	}
 

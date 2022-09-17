@@ -2,6 +2,7 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -9,6 +10,7 @@
  http://www.springframework.org/schema/aop
  https://www.springframework.org/schema/aop/spring-aop.xsd">
 
+	<!-- Constructor Injection -->
 	<bean class="com.spring.springcore.ci.Company" name="company">
 		<constructor-arg value="Google" />
 	</bean>
@@ -23,5 +25,17 @@
 		<constructor-arg value="2" />
 		<constructor-arg ref="company" />
 	</bean>
+
+
+	<!-- C Schema -->
+	<bean class="com.spring.springcore.ci.Developer" name="dev3"
+		c:name="Breg" c:experience="10" c:company-ref="company" />
+
+
+	<bean class="com.spring.springcore.ci.Company" name="company2"
+		c:companyName="ZS" />
+
+	<bean class="com.spring.springcore.ci.Developer" name="dev4"
+		c:name="Jackson" c:experience="7" c:company-ref="company2" />
 
 </beans>
