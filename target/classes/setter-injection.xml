@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/aop
+ https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- Setter injection -->
+
+	<bean class="com.spring.springcore.Student" name="student1">
+		<property name="id">
+			<value>111</value>
+		</property>
+		<property name="name">
+			<value>John</value>
+		</property>
+		<property name="address">
+			<value>London</value>
+		</property>
+		<property name="age">
+			<value>15</value>
+		</property>
+	</bean>
+
+
+
+</beans>
