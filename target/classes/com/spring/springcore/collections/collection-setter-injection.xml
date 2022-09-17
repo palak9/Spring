@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/aop
+ https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+	<bean class="com.spring.springcore.collections.Employee" name="employee1">
+		<property name="id" value="100" />
+		<property name="name" value="Mary" />
+		<property name="phones">
+			<list>
+				<value>0873223456</value>
+				<value>8483223456</value>
+				<value>8383746474</value>
+				<value>0873223456</value>
+				<value>4474848484</value>
+			</list>
+		</property>
+		<property name="addresses">
+			<set>
+				<value>Boston</value>
+				<value>Madison</value>
+				<value>Chicago</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="dataScience" value="1Month" />
+				<entry key="machineLearning" value="5Months" />
+			</map>
+		</property>
+
+	</bean>
+
+</beans>
