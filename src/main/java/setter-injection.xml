@@ -9,7 +9,7 @@
  https://www.springframework.org/schema/aop/spring-aop.xsd">
 
 	<!-- Setter injection -->
-
+	<!-- method1 -->
 	<bean class="com.spring.springcore.Student" name="student1">
 		<property name="id">
 			<value>111</value>
@@ -25,6 +25,13 @@
 		</property>
 	</bean>
 
+	<!-- method2 -->
+	<bean class="com.spring.springcore.Student" name="student2">
+		<property name="id" value="222" />
+		<property name="name" value="Jack" />
+		<property name="address" value="UK" />
+		<property name="age" value="20" />
+	</bean>
 
 
 </beans>
